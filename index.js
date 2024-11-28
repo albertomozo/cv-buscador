@@ -92,6 +92,6 @@ app.post('/preguntar', (req, res) => {
 
   res.json({ respuesta });
 });
-
+res.setHeader('Access-Control-Allow-Origin', '*'); // Permite solicitudes de cualquier origen
 // Iniciar el servidor
 app.listen(PORT, () => console.log(`Servidor corriendo en http://localhost:${PORT}`));
